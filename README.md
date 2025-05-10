@@ -1,26 +1,60 @@
 # SymbolicDifferentiationOfPolynomials
 
-Gem для символьного дифференцирования математических выражений в Ruby. Преобразуйте строковые выражения в их производные с автоматическим упрощением. 
+Gem for symbolic differentiation of polynomials in Ruby. Convert string expressions of polynomials to their derivatives with automatic simplification. 
 
 ## Installation
-
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+bundle add symbolic_differentiation_of_polynomials
 ```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+gem install symbolic_differentiation_of_polynomials
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'symbolic_differentiation_of_polynomials'
+
+# The derivative of x
+puts SymbolicDiff.derive("x^2 + 4*x + 3", 'x') # => "2*x + 4"
+
+# The derivative of y
+puts SymbolicDiff.derive("x^3 + 2*y^2", 'y')   # => "4*y"
+```
+
+Examples
+
+Expression 	  Variable 	  Result
+x^2 + 3*x	  x	          2*x + 3
+5*y^3 + 2*y	  y	          15*y^2 + 2
+4*x^5 - x^2	  x	          20*x^4 - 2*x
+
+Features
+✅ Supported operations:
+
+Addition (+)
+
+Multiplication (*)
+
+Degree (^)
+
+Constants and variables
+
+Unary minus
+
+🔄 Automatic simplification:
+
+x + 0 → x
+
+3*x*2 → 6*x
+
+x^1 → x
 
 ## Development
 
@@ -30,7 +64,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/symbolic_differentiation_of_polynomials.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dakuznet/Symbolic-differentiation-of-polynomials.
 
 ## License
 
