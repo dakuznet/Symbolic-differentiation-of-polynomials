@@ -28,14 +28,6 @@ puts SymbolicDiff.derive("x^2 + 4*x + 3", 'x') # => "2*x + 4"
 puts SymbolicDiff.derive("x^3 + 2*y^2", 'y')   # => "4*y"
 ```
 
-Examples
-
-Expression 	  Variable 	  Result
-x^2 + 3*x	  x	          2*x + 3
-5*y^3 + 2*y	  y	          15*y^2 + 2
-4*x^5 - x^2	  x	          20*x^4 - 2*x
-
-Features
 ✅ Supported operations:
 
 Addition (+)
